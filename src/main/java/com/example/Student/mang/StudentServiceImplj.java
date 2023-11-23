@@ -45,13 +45,11 @@ public class StudentServiceImplj implements StudentService {
 
 	@Override
 	public Student getStudentById(Long id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void deleteStudent(Long id) {
-		// TODO Auto-generated method stub
 
 	}
 }

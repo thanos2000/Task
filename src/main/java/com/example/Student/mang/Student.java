@@ -1,13 +1,12 @@
 package com.example.Student.mang;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-@Entity
-@Document
+@Document(collection = "student")
 public class Student {
-	
+	@Id
 	private Long id;
 	private String name;
 	private int age;
@@ -39,5 +38,13 @@ public class Student {
 
 	public void setid(Long id2) {
 
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }
