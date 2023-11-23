@@ -1,4 +1,4 @@
-package com.example.Student.mang;
+package com.example.Student.mang.ServiceImpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,10 +6,15 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.Student.mang.Bean.Student;
+import com.example.Student.mang.Repository.StudentRepository;
+import com.example.Student.mang.Service.StudentService;
+
 @Service
-public class StudentServiceImplj implements StudentService {
+public class StudentServiceImpl implements StudentService {
 
 	// Logger logger = LoggerFactory.getLogger(LoggingController.class);
+
 	@Autowired
 	private StudentRepository studentRepository;
 
@@ -32,7 +37,7 @@ public class StudentServiceImplj implements StudentService {
 	@Override
 	public Student updateStudent(Long id, Student student) {
 		if (studentRepository.existsById(id)) {
-			student.setid(id);
+			student.setId(id);
 			return studentRepository.save(student);
 		}
 		return null;

@@ -1,4 +1,4 @@
-package com.example.Student.mang;
+package com.example.Student.mang.Bean;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,6 +11,18 @@ public class Student {
 	private String name;
 	private int age;
 	private double salary;
+
+	public Student() {
+		super();
+	}
+
+	public Student(Long id, String name, int age, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
 
 	public String getName() {
 		return name;
@@ -36,7 +48,7 @@ public class Student {
 		this.salary = salary;
 	}
 
-	public void setid(Long id2) {
+	public void setId1(Long id2) {
 
 	}
 

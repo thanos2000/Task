@@ -1,10 +1,12 @@
-package com.example.Student.mang;
+package com.example.Student.mang.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
+
+import com.example.Student.mang.Bean.Student;
 
 @Repository
 public interface StudentRepository extends MongoRepository<Student, Long> {
