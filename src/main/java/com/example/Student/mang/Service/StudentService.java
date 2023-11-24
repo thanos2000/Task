@@ -2,21 +2,18 @@ package com.example.Student.mang.Service;
 
 import java.util.List;
 
-import com.example.Student.mang.Bean.Student;
+import com.example.Student.mang.Dto.StudentDto;
 
 public interface StudentService {
 
-	List<Student> getAllStudents();
+	List<StudentDto> getAllStudents();
 
-	Student getStudentById(Long id);
+	StudentDto getStudentById(long id);
 
-	Student createStudent(Student student);
+	StudentDto createStudent(StudentDto student);
 
-	Student updateStudent(Long id, Student student);
+	StudentDto updateStudent(long id, StudentDto student);
 
-	void deleteStudent(Long id);
+	void deleteStudent(long id);
 
-	void deleteStudent(String id);
-
-	Student getStudentById(String id);
 }

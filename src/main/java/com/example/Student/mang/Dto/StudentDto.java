@@ -1,25 +1,35 @@
-package com.example.Student.mang.Bean;
+package com.example.Student.mang.Dto;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.validation.constraints.NotEmpty;
 
-@Document(collection = "student")
-public class Student {
-	@org.springframework.data.annotation.Id
-	private long id;
+public class StudentDto {
+
+	private Long id;
+	@NotEmpty
 	private String name;
+	
 	private int age;
+	
 	private double salary;
 
-	public Student() {
+	public StudentDto() {
 		super();
 	}
 
-	public Student(long id, String name, int age, double salary) {
+	public StudentDto(Long id, String name, int age, double salary) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -44,17 +54,5 @@ public class Student {
 
 	public void setSalary(double salary) {
 		this.salary = salary;
-	}
-
-	public void setId1(long id2) {
-
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 }
